@@ -1,0 +1,240 @@
+body {
+    display: grid;
+    grid-template-areas:
+        "nav header"
+        "nav article"
+        "nav ads"
+        "nav footer";
+    grid-template-rows: 80px 0.2fr 70px 250px;
+    grid-template-columns: 20% 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 20px;
+    height: 100vh;
+    margin: 0;
+}
+
+header,
+footer,
+article,
+div {
+    color: #1d3557;
+}
+
+a,
+nav {
+    padding: 1.2em 0;
+    color: white;
+    background-color: #14213d;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+a {
+    display: block;
+}
+
+a:hover {
+    background-color: #003566;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#pageHeader {
+    grid-area: header;
+}
+
+#pageFooter {
+    grid-area: footer;
+}
+
+#mainArticle {
+    grid-area: article;
+}
+
+#mainNav {
+    grid-area: nav;
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+}
+
+#siteAds {
+    grid-area: ads;
+    background-color: #cccccc;
+    padding: 10px;
+    margin: 0;
+    height: 70px;
+
+}
+
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+    body {
+        grid-template-areas:
+            "header"
+            "article"
+            "ads"
+            "nav"
+            "footer";
+        grid-template-rows: 80px 1fr 70px 1fr 70px;
+        grid-template-columns: 1fr;
+    }
+}
+
+.button {
+    padding: 16px 30px;
+    font-size: 16px;
+    margin: 4px 2px;
+    font-weight: bold;
+    transition-duration: 0.4s;
+    color: white;
+    background-color: #1d3557;
+    position: relative;
+    display: inline-block;
+    transform: translateY(-100%);
+}
+
+.button:hover {
+    color: #003566;
+    background-color: white;
+}
+
+.dropbtn {
+    background-color: #1d3557;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    left: 75%;
+    font-weight: bold;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #1d3557
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #14213d;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
+}
+
+.grid-container>div {
+    background-color: #e3e3e3;
+    text-align: center;
+    margin-top: 40px;
+    padding: 40px 0px 40px 20px;
+    font-size: 30px;
+    height: 280px;
+    width: 260px;
+    text-align: left;
+}
+
+.checkbox {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    background-color: #cccccc;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 15%;
+}
+
+label {
+    font-family: Helvetica;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    border: solid 1px #000000;
+    margin-right: 8px;
+    position: relative;
+}
+
+[type=checkbox]:checked::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: #003566;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.bolder{
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    background-color: #cccccc;
+    padding-top: 10px;
+    padding-left: 15px;
+    /* font-size: large; */
+}
+
+.right {
+    text-align: right;
+    margin-right: 20px;
+}
